@@ -1,20 +1,339 @@
 <!DOCTYPE html>
-<html>
-    <head>
-      <title>Example</title>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Parachute Teachers | Onboarding</title>
+    <!-- CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//www.fuelcdn.com/fuelux/3.13.0/css/fuelux.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="http://www.pdffiller.com/css_v2/link2fill-0.1.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/css/jasny-bootstrap.min.css">
+  </head>
+  <body class="fuelux">
 
-      <script src="vendor.bundle.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="bundle.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-    <body class="container-fluid">
-      <h1>Example</h1>
+  	<img class="center-block" src="http://www.parachuteteachers.com/uploads/4/8/4/7/48475115/8742942.png"/>
+    <br/>
+    <br/>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-      ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.</p>
-    </body>
+    <div class="col-xs-10 col-xs-offset-1">
+    <div class="wizard" data-initialize="wizard" id="onboardingWizard">
+      	<ul class="steps">
+      		<li data-step="1" data-name="contact" class="active">
+      			<span class="badge">1</span>Contact info
+      			<span class="chevron"></span>
+      		</li>
+      		<li data-step="2">
+      			<span class="badge">2</span>Fingerprinting
+      			<span class="chevron"></span>
+      		</li>
+      		<li data-step="3">
+      			<span class="badge">3</span>Additional info
+      			<span class="chevron"></span>
+      		</li>
+          <li data-step="4">
+      			<span class="badge">4</span>Signatures
+      			<span class="chevron"></span>
+      		</li>
+          <li data-step="5">
+      			<span class="badge">5</span>Forms
+      			<span class="chevron"></span>
+      		</li>
+          <li data-step="6">
+      			<span class="badge">6</span>Upload receipt
+      			<span class="chevron"></span>
+      		</li>
+      	</ul>
+
+      <div class="actions">
+      	<button type="button" class="btn btn-default btn-prev">
+      		<span class="glyphicon glyphicon-arrow-left"></span>Prev</button>
+      	<button type="button" class="btn btn-primary btn-next" data-last="Complete">Next
+      		<span class="glyphicon glyphicon-arrow-right"></span>
+      	</button>
+      </div>
+
+      <form id="orderForm" method="post" class="form-horizontal">
+        <div class="step-content">
+        	<div class="step-pane active" data-step="1">
+            <form>
+            	<div class="form-group col-xs-10"> <!-- Full Name -->
+            		<label for="full_name_id" class="control-label col-xs-3">First Name</label>
+                <div class="col-xs-4">
+                    <input type="text" class="form-control" name="firstName" placeholder="First name" />
+                </div>
+                <label for="mid_name_id" class="control-label col-xs-2">Middle Initial</label>
+                <div class="col-xs-2">
+                    <input type="text" class="form-control" name="midName" placeholder="M.I." />
+                </div>
+            	</div>
+
+              <div class="form-group col-xs-10"> <!-- Street 1 -->
+            		<label for="last_name_id" class="control-label col-xs-3">Last/Family Name*</label>
+                <div class="col-xs-8">
+                  <input type="text" class="form-control" id="last_name_id" name="lastName" placeholder="Last name">
+                </div>
+              </div>
+
+
+
+            	<div class="form-group col-xs-10"> <!-- Street 1 -->
+            		<label for="street1_id" class="control-label col-xs-3">Street Address 1*</label>
+                <div class="col-xs-8">
+                  <input type="text" class="form-control" id="street1_id" name="street1" placeholder="Street address, P.O. box, company name, c/o">
+                </div>
+              </div>
+
+            	<div class="form-group col-xs-10"> <!-- Street 2 -->
+            		<label for="street2_id" class="control-label col-xs-3">Street Address 2</label>
+                <div class="col-xs-8">
+                  <input type="text" class="form-control" id="street2_id" name="street2" placeholder="Apartment, suite, unit, building, floor, etc.">
+                </div>
+              </div>
+
+            	<div class="form-group col-xs-10"> <!-- City-->
+            		<label for="city_id" class="control-label col-xs-3">City*</label>
+                <div class="col-xs-8">
+            		  <input type="text" class="form-control" id="city_id" name="city" placeholder="City/town">
+                </div>
+              </div>
+
+            	<div class="form-group col-xs-10"> <!-- State Button -->
+            		<label for="state_id" class="control-label col-xs-3">State*</label>
+                <div class="col-xs-3">
+              		<select class="form-control" id="state_id">
+              			<option value="AL">Alabama</option>
+              			<option value="AK">Alaska</option>
+              			<option value="AZ">Arizona</option>
+              			<option value="AR">Arkansas</option>
+              			<option value="CA">California</option>
+              			<option value="CO">Colorado</option>
+              			<option value="CT">Connecticut</option>
+              			<option value="DE">Delaware</option>
+              			<option value="DC">District Of Columbia</option>
+              			<option value="FL">Florida</option>
+              			<option value="GA">Georgia</option>
+              			<option value="HI">Hawaii</option>
+              			<option value="ID">Idaho</option>
+              			<option value="IL">Illinois</option>
+              			<option value="IN">Indiana</option>
+              			<option value="IA">Iowa</option>
+              			<option value="KS">Kansas</option>
+              			<option value="KY">Kentucky</option>
+              			<option value="LA">Louisiana</option>
+              			<option value="ME">Maine</option>
+              			<option value="MD">Maryland</option>
+              			<option value="MA">Massachusetts</option>
+              			<option value="MI">Michigan</option>
+              			<option value="MN">Minnesota</option>
+              			<option value="MS">Mississippi</option>
+              			<option value="MO">Missouri</option>
+              			<option value="MT">Montana</option>
+              			<option value="NE">Nebraska</option>
+              			<option value="NV">Nevada</option>
+              			<option value="NH">New Hampshire</option>
+              			<option value="NJ">New Jersey</option>
+              			<option value="NM">New Mexico</option>
+              			<option value="NY">New York</option>
+              			<option value="NC">North Carolina</option>
+              			<option value="ND">North Dakota</option>
+              			<option value="OH">Ohio</option>
+              			<option value="OK">Oklahoma</option>
+              			<option value="OR">Oregon</option>
+              			<option value="PA">Pennsylvania</option>
+              			<option value="RI">Rhode Island</option>
+              			<option value="SC">South Carolina</option>
+              			<option value="SD">South Dakota</option>
+              			<option value="TN">Tennessee</option>
+              			<option value="TX">Texas</option>
+              			<option value="UT">Utah</option>
+              			<option value="VT">Vermont</option>
+              			<option value="VA">Virginia</option>
+              			<option value="WA">Washington</option>
+              			<option value="WV">West Virginia</option>
+              			<option value="WI">Wisconsin</option>
+              			<option value="WY">Wyoming</option>
+              		</select>
+                </div>
+                <!-- Zip Code-->
+            		<label for="zip_id" class="control-label col-xs-2">Zip Code*</label>
+                <div class="col-xs-3">
+            		    <input type="text" class="form-control" id="zip_id" name="zip" placeholder="#####">
+                </div>
+            	</div>
+
+            </form>
+        	</div>
+        	<div class="step-pane" data-step="2">
+            <div class="form-horizontal container-fluid scheduler" data-initialize="scheduler" role="form" id="myScheduler">
+              <div class="row start-datetime">
+              <label class="col-sm-2 control-label scheduler-label" for="myStartDate">Start Date</label>
+              <div class="col-sm-10">
+                  <div class="row no-margin">
+                      <div class="col-xs-4 col-sm-4 form-group">
+                          <div class="datepicker start-date">
+                              <div class="input-group">
+                                  <input class="form-control" id="myStartDate" type="text"/>
+                                  <div class="input-group-btn">
+                                      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                          <span class="glyphicon glyphicon-calendar"></span>
+                                          <span class="sr-only">Toggle Calendar</span>
+                                      </button>
+                                      <div class="dropdown-menu dropdown-menu-right datepicker-calendar-wrapper" role="menu">
+                                          <div class="datepicker-calendar">
+                                              <div class="datepicker-calendar-header">
+                                                  <button type="button" class="prev"><span class="glyphicon glyphicon-chevron-left"></span><span class="sr-only">Previous Month</span></button>
+                                                  <button type="button" class="next"><span class="glyphicon glyphicon-chevron-right"></span><span class="sr-only">Next Month</span></button>
+                                                  <button type="button" class="title">
+                                                          <span class="month">
+                                                              <span data-month="0">January</span>
+                                                              <span data-month="1">February</span>
+                                                              <span data-month="2">March</span>
+                                                              <span data-month="3">April</span>
+                                                              <span data-month="4">May</span>
+                                                              <span data-month="5">June</span>
+                                                              <span data-month="6">July</span>
+                                                              <span data-month="7">August</span>
+                                                              <span data-month="8">September</span>
+                                                              <span data-month="9">October</span>
+                                                              <span data-month="10">November</span>
+                                                              <span data-month="11">December</span>
+                                                          </span> <span class="year"></span>
+                                                  </button>
+                                              </div>
+                                              <table class="datepicker-calendar-days">
+                                                  <thead>
+                                                  <tr>
+                                                      <th>Su</th>
+                                                      <th>Mo</th>
+                                                      <th>Tu</th>
+                                                      <th>We</th>
+                                                      <th>Th</th>
+                                                      <th>Fr</th>
+                                                      <th>Sa</th>
+                                                  </tr>
+                                                  </thead>
+                                                  <tbody></tbody>
+                                              </table>
+                                              <div class="datepicker-calendar-footer">
+                                                  <button type="button" class="datepicker-today">Today</button>
+                                              </div>
+                                          </div>
+                                          <div class="datepicker-wheels" aria-hidden="true">
+                                              <div class="datepicker-wheels-month">
+                                                  <h2 class="header">Month</h2>
+                                                  <ul>
+                                                      <li data-month="0"><button type="button">Jan</button></li>
+                                                      <li data-month="1"><button type="button">Feb</button></li>
+                                                      <li data-month="2"><button type="button">Mar</button></li>
+                                                      <li data-month="3"><button type="button">Apr</button></li>
+                                                      <li data-month="4"><button type="button">May</button></li>
+                                                      <li data-month="5"><button type="button">Jun</button></li>
+                                                      <li data-month="6"><button type="button">Jul</button></li>
+                                                      <li data-month="7"><button type="button">Aug</button></li>
+                                                      <li data-month="8"><button type="button">Sep</button></li>
+                                                      <li data-month="9"><button type="button">Oct</button></li>
+                                                      <li data-month="10"><button type="button">Nov</button></li>
+                                                      <li data-month="11"><button type="button">Dec</button></li>
+                                                  </ul>
+                                              </div>
+                                              <div class="datepicker-wheels-year">
+                                                  <h2 class="header">Year</h2>
+                                                  <ul></ul>
+                                              </div>
+                                              <div class="datepicker-wheels-footer clearfix">
+                                                  <button type="button" class="btn datepicker-wheels-back"><span class="glyphicon glyphicon-arrow-left"></span><span class="sr-only">Return to Calendar</span></button>
+                                                  <button type="button" class="btn datepicker-wheels-select">Select <span class="sr-only">Month and Year</span></button>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-xs-4 col-sm-4 form-group">
+                          <label class="sr-only" for="MyStartTime">Start Time</label>
+                          <div class="input-group combobox start-time">
+                              <input id="MyStartTime" type="text" class="form-control" />
+                              <div class="input-group-btn">
+                                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                      <span class="caret"></span>
+                                      <span class="sr-only">Toggle Dropdown</span>
+                                  </button>
+                                  <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                                      <li data-value="12:00 AM"><a href="#">12:00 AM</a></li>
+                                      <li data-value="12:30 AM"><a href="#">12:30 AM</a></li>
+                                      <li data-value="1:00 AM"><a href="#">1:00 AM</a></li>
+                                      <li data-value="1:30 AM"><a href="#">1:30 AM</a></li>
+                                      <li data-value="2:00 AM"><a href="#">2:00 AM</a></li>
+                                      <li data-value="2:30 AM"><a href="#">2:30 AM</a></li>
+                                      <li data-value="3:00 AM"><a href="#">3:00 AM</a></li>
+                                      <li data-value="3:30 AM"><a href="#">3:30 AM</a></li>
+                                      <li data-value="4:00 AM"><a href="#">4:00 AM</a></li>
+                                      <li data-value="4:30 AM"><a href="#">4:30 AM</a></li>
+                                      <li data-value="5:00 AM"><a href="#">5:00 AM</a></li>
+                                      <li data-value="5:30 AM"><a href="#">5:30 AM</a></li>
+                                      <li data-value="6:00 AM"><a href="#">6:00 AM</a></li>
+                                      <li data-value="6:30 AM"><a href="#">6:30 AM</a></li>
+                                      <li data-value="7:00 AM"><a href="#">7:00 AM</a></li>
+                                      <li data-value="7:30 AM"><a href="#">7:30 AM</a></li>
+                                      <li data-value="8:00 AM"><a href="#">8:00 AM</a></li>
+                                      <li data-value="8:30 AM"><a href="#">8:30 AM</a></li>
+                                      <li data-value="9:00 AM"><a href="#">9:00 AM</a></li>
+                                      <li data-value="9:30 AM"><a href="#">9:30 AM</a></li>
+                                      <li data-value="10:00 AM"><a href="#">10:00 AM</a></li>
+                                      <li data-value="10:30 AM"><a href="#">10:30 AM</a></li>
+                                      <li data-value="11:00 AM"><a href="#">11:00 AM</a></li>
+                                      <li data-value="11:30 AM"><a href="#">11:30 AM</a></li>
+                                      <li data-value="12:00 PM"><a href="#">12:00 PM</a></li>
+                                      <li data-value="12:30 PM"><a href="#">12:30 PM</a></li>
+                                      <li data-value="1:00 PM"><a href="#">1:00 PM</a></li>
+                                      <li data-value="1:30 PM"><a href="#">1:30 PM</a></li>
+                                      <li data-value="2:00 PM"><a href="#">2:00 PM</a></li>
+                                      <li data-value="2:30 PM"><a href="#">2:30 PM</a></li>
+                                      <li data-value="3:00 PM"><a href="#">3:00 PM</a></li>
+                                      <li data-value="3:30 PM"><a href="#">3:30 PM</a></li>
+                                      <li data-value="4:00 PM"><a href="#">4:00 PM</a></li>
+                                      <li data-value="4:30 PM"><a href="#">4:30 PM</a></li>
+                                      <li data-value="5:00 PM"><a href="#">5:00 PM</a></li>
+                                      <li data-value="5:30 PM"><a href="#">5:30 PM</a></li>
+                                      <li data-value="6:00 PM"><a href="#">6:00 PM</a></li>
+                                      <li data-value="6:30 PM"><a href="#">6:30 PM</a></li>
+                                      <li data-value="7:00 PM"><a href="#">7:00 PM</a></li>
+                                      <li data-value="7:30 PM"><a href="#">7:30 PM</a></li>
+                                      <li data-value="8:00 PM"><a href="#">8:00 PM</a></li>
+                                      <li data-value="8:30 PM"><a href="#">8:30 PM</a></li>
+                                      <li data-value="9:00 PM"><a href="#">9:00 PM</a></li>
+                                      <li data-value="9:30 PM"><a href="#">9:30 PM</a></li>
+                                      <li data-value="10:00 PM"><a href="#">10:00 PM</a></li>
+                                      <li data-value="10:30 PM"><a href="#">10:30 PM</a></li>
+                                      <li data-value="11:00 PM"><a href="#">11:00 PM</a></li>
+                                      <li data-value="11:30 PM"><a href="#">11:30 PM</a></li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        	</div>
+        	<div class="step-pane" data-step="3">
+        		<h4>Design Template</h4>
+        		<p>Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip. Sea lettuce lettuce water chestnut eggplant winter purslane fennel azuki bean earthnut pea sierra leone bologi leek soko chicory celtuce parsley jÃ­cama salsify. </p>
+        	</div>
+        </div>
+      </form>
+
+</div>
+</div>
+
+    <!-- jQuery -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="//www.fuelcdn.com/fuelux/3.13.0/js/fuelux.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/js/jasny-bootstrap.min.js"></script>
+  </body>
 </html>
