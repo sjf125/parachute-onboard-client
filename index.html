@@ -67,9 +67,12 @@
         <div class="step-content">
           <div class="step-pane active" data-step="1">
             <form>
+              <div class="col-md-10">
+                <h4>Your contact information</h4>
+              </div>
               <div class="form-group col-md-10">
                 <!-- First and Middle Name -->
-                <label for="full_name_id" class="control-label col-md-3">First Name</label>
+                <label for="first_name_id" class="control-label col-md-3">First Name</label>
                 <div class="col-md-4">
                   <input type="text" class="form-control" name="firstName" placeholder="First name" />
                 </div>
@@ -81,9 +84,9 @@
 
               <div class="form-group col-md-10">
                 <!-- Last Name -->
-                <label for="last_name_id" class="control-label col-md-3">Last/Family Name*</label>
+                <label for="last_name_id" class="control-label col-md-3">Last Name*</label>
                 <div class="col-md-8">
-                  <input type="text" class="form-control" id="last_name_id" name="lastName" placeholder="Last name">
+                  <input type="text" class="form-control" id="last_name_id" name="lastName" placeholder="Last/Family name">
                 </div>
               </div>
 
@@ -177,7 +180,134 @@
                   <input type="text" class="form-control" id="zip_id" name="zip" placeholder="#####">
                 </div>
               </div>
+              <div class="form-group col-md-10">
+                <!-- Phone-->
+                <label for="phone_id" class="control-label col-md-3">Phone*</label>
+                <div class="col-md-3">
+                  <input type="tel" class="form-control" id="phone_id" name="phone" placeholder="Primary phone number">
+                </div>
+              </div>
+              <br/>
+              <br/>
+              <div class="col-md-10">
+                <h4>Emergency contact information</h4>
+              </div>
+              <div class="form-group col-md-10">
+                <!-- Emergency contact name -->
+                <label for="em_contact_name_id" class="control-label col-md-3">First Name</label>
+                <div class="col-md-4">
+                  <input type="text" class="form-control" name="emFirstName" placeholder="First name" />
+                </div>
+                <div class="col-md-4">
+                  <input type="text" class="form-control" name="emLastName" placeholder="Last name" />
+                </div>
+              </div>
 
+              <div class="form-group col-md-10">
+                <!-- Emergency contact relation -->
+                <label for="relation_id" class="control-label col-md-3">Relation*</label>
+                <div class="col-md-8">
+                  <input type="text" class="form-control" id="relation_id" name="relation" placeholder="Relation to emergency contact">
+                </div>
+              </div>
+
+              <div class="form-group col-md-10">
+                <!-- Street 1 -->
+                <label for="em_street1_id" class="control-label col-md-3">Street Address 1*</label>
+                <div class="col-md-8">
+                  <input type="text" class="form-control" id="em_street1_id" name="em_street1" placeholder="Street address, P.O. box, company name, c/o">
+                </div>
+              </div>
+
+              <div class="form-group col-md-10">
+                <!-- Street 2 -->
+                <label for="em_street2_id" class="control-label col-md-3">Street Address 2</label>
+                <div class="col-md-8">
+                  <input type="text" class="form-control" id="em_street2_id" name="em_street2" placeholder="Apartment, suite, unit, building, floor, etc.">
+                </div>
+              </div>
+
+              <div class="form-group col-md-10">
+                <!-- City-->
+                <label for="em_city_id" class="control-label col-md-3">City*</label>
+                <div class="col-md-8">
+                  <input type="text" class="form-control" id="em_city_id" name="em_city" placeholder="City/town">
+                </div>
+              </div>
+
+              <div class="form-group col-md-10">
+                <!-- State Button -->
+                <label for="em_state_id" class="control-label col-md-3">State*</label>
+                <div class="col-md-3">
+                  <select class="form-control" id="em_state_id">
+                    <option value="">please select</option>
+                    <option value="">---</option>
+                    <option value="AL">Alabama</option>
+                    <option value="AK">Alaska</option>
+                    <option value="AZ">Arizona</option>
+                    <option value="AR">Arkansas</option>
+                    <option value="CA">California</option>
+                    <option value="CO">Colorado</option>
+                    <option value="CT">Connecticut</option>
+                    <option value="DE">Delaware</option>
+                    <option value="DC">District Of Columbia</option>
+                    <option value="FL">Florida</option>
+                    <option value="GA">Georgia</option>
+                    <option value="HI">Hawaii</option>
+                    <option value="ID">Idaho</option>
+                    <option value="IL">Illinois</option>
+                    <option value="IN">Indiana</option>
+                    <option value="IA">Iowa</option>
+                    <option value="KS">Kansas</option>
+                    <option value="KY">Kentucky</option>
+                    <option value="LA">Louisiana</option>
+                    <option value="ME">Maine</option>
+                    <option value="MD">Maryland</option>
+                    <option value="MA">Massachusetts</option>
+                    <option value="MI">Michigan</option>
+                    <option value="MN">Minnesota</option>
+                    <option value="MS">Mississippi</option>
+                    <option value="MO">Missouri</option>
+                    <option value="MT">Montana</option>
+                    <option value="NE">Nebraska</option>
+                    <option value="NV">Nevada</option>
+                    <option value="NH">New Hampshire</option>
+                    <option value="NJ">New Jersey</option>
+                    <option value="NM">New Mexico</option>
+                    <option value="NY">New York</option>
+                    <option value="NC">North Carolina</option>
+                    <option value="ND">North Dakota</option>
+                    <option value="OH">Ohio</option>
+                    <option value="OK">Oklahoma</option>
+                    <option value="OR">Oregon</option>
+                    <option value="PA">Pennsylvania</option>
+                    <option value="RI">Rhode Island</option>
+                    <option value="SC">South Carolina</option>
+                    <option value="SD">South Dakota</option>
+                    <option value="TN">Tennessee</option>
+                    <option value="TX">Texas</option>
+                    <option value="UT">Utah</option>
+                    <option value="VT">Vermont</option>
+                    <option value="VA">Virginia</option>
+                    <option value="WA">Washington</option>
+                    <option value="WV">West Virginia</option>
+                    <option value="WI">Wisconsin</option>
+                    <option value="WY">Wyoming</option>
+                  </select>
+                </div>
+                <!-- Zip Code-->
+                <label for="em_zip_id" class="control-label col-md-2">Zip Code*</label>
+                <div class="col-md-3">
+                  <input type="text" class="form-control" id="em_zip_id" name="em_zip" placeholder="#####">
+                </div>
+              </div>
+              <div class="form-group col-md-10">
+                <!-- Phone-->
+                <label for="em_phone_id" class="control-label col-md-3">Phone*</label>
+                <div class="col-md-3">
+                  <input type="tel" class="form-control" id="em_phone_id" name="em_phone" placeholder="Primary phone number">
+                </div>
+              </div>
             </form>
           </div>
           <div class="step-pane" data-step="2">
@@ -594,7 +724,7 @@
               <label for="license_id" class="control-label col-md-3">Drivers License*</label>
               <div class="col-md-3">
                 <select class="form-control" id="prevState_id">
-                  <option value="">issuing state</option>
+                  <option value="">Issuing state</option>
                   <option value="">---</option>
                   <option value="AL">Alabama</option>
                   <option value="AK">Alaska</option>
@@ -653,6 +783,7 @@
                 <input type="text" class="form-control" id="license_num_id" name="license_num" placeholder="License number">
               </div>
             </div>
+            <br/>
             <br/>
             <br/>
             <div class="col-md-12">
