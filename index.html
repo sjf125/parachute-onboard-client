@@ -41,15 +41,11 @@
           <span class="chevron"></span>
         </li>
         <li data-step="4">
-          <span class="badge">4</span>Signatures
+          <span class="badge">4</span>Complete forms
           <span class="chevron"></span>
         </li>
         <li data-step="5">
-          <span class="badge">5</span>Forms
-          <span class="chevron"></span>
-        </li>
-        <li data-step="6">
-          <span class="badge">6</span>Upload receipt
+          <span class="badge">5</span>Upload receipt
           <span class="chevron"></span>
         </li>
       </ul>
@@ -74,7 +70,7 @@
                 <!-- First and Middle Name -->
                 <label for="first_name_id" class="control-label col-md-3">First Name</label>
                 <div class="col-md-4">
-                  <input type="text" class="form-control" name="firstName" placeholder="First name" />
+                  <input type="text" class="form-control" name="firstName" placeholder="First/given name" />
                 </div>
                 <label for="mid_name_id" class="control-label col-md-2">Middle Initial</label>
                 <div class="col-md-2">
@@ -86,7 +82,7 @@
                 <!-- Last Name -->
                 <label for="last_name_id" class="control-label col-md-3">Last Name*</label>
                 <div class="col-md-8">
-                  <input type="text" class="form-control" id="last_name_id" name="lastName" placeholder="Last/Family name">
+                  <input type="text" class="form-control" id="last_name_id" name="lastName" placeholder="Last/family name">
                 </div>
               </div>
 
@@ -194,20 +190,20 @@
               </div>
               <div class="form-group col-md-10">
                 <!-- Emergency contact name -->
-                <label for="em_contact_name_id" class="control-label col-md-3">First Name</label>
+                <label for="em_name_id" class="control-label col-md-3">Name</label>
                 <div class="col-md-4">
-                  <input type="text" class="form-control" name="emFirstName" placeholder="First name" />
+                  <input type="text" class="form-control" id="em_first_name" name="emFirstName" placeholder="First/given name" />
                 </div>
                 <div class="col-md-4">
-                  <input type="text" class="form-control" name="emLastName" placeholder="Last name" />
+                  <input type="text" class="form-control" id="em_last_name" name="emLastName" placeholder="Last/family name" />
                 </div>
               </div>
 
               <div class="form-group col-md-10">
                 <!-- Emergency contact relation -->
-                <label for="relation_id" class="control-label col-md-3">Relation*</label>
+                <label for="em_relation_id" class="control-label col-md-3">Relation*</label>
                 <div class="col-md-8">
-                  <input type="text" class="form-control" id="relation_id" name="relation" placeholder="Relation to emergency contact">
+                  <input type="text" class="form-control" id="em_relation_id" name="em_relation" placeholder="Relation to emergency contact">
                 </div>
               </div>
 
@@ -319,13 +315,13 @@
             <h4>When you've scheduled your fingerprinting, please enter the date and time of your appointment below</h4>
             <div class="form-horizontal container-fluid scheduler" data-initialize="scheduler" role="form" id="myScheduler">
               <div class="row start-datetime">
-                <label class="col-sm-2 control-label scheduler-label" for="myStartDate">Start Date</label>
+                <label class="col-sm-2 control-label scheduler-label" for="fngrprnt_date">Start Date</label>
                 <div class="col-sm-10">
                   <div class="row no-margin">
                     <div class="col-md-4 col-sm-4 form-group">
                       <div class="datepicker start-date">
                         <div class="input-group">
-                          <input class="form-control" id="myStartDate" type="text" />
+                          <input class="form-control" id="fngrprnt_date" type="text" />
                           <div class="input-group-btn">
                             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                               <span class="glyphicon glyphicon-calendar"></span>
@@ -428,9 +424,9 @@
                       </div>
                     </div>
                     <div class="col-md-4 col-sm-4 form-group">
-                      <label class="sr-only" for="MyStartTime">Start Time</label>
+                      <label class="sr-only" for="fngrprnt_time">Start Time</label>
                       <div class="input-group combobox start-time">
-                        <input id="MyStartTime" type="text" class="form-control" />
+                        <input id="fngrprnt_time" type="text" class="form-control" />
                         <div class="input-group-btn">
                           <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                             <span class="caret"></span>
@@ -659,19 +655,18 @@
             </div>
             <div class="form-group col-md-10">
               <!-- Birth city -->
-              <label for="street1_id" class="control-label col-md-3">Birth City*</label>
+              <label for="birth_city_id" class="control-label col-md-3">Birth City*</label>
               <div class="col-md-8">
-                <input type="text" class="form-control" id="birth_city_id" name="prevStreet1" placeholder="City in which you were born">
+                <input type="text" class="form-control" id="birth_city_id" name="birthCity" placeholder="City in which you were born">
               </div>
             </div>
             <div class="form-group col-md-10">
               <!-- Gender -->
-              <label for="street1_id" class="control-label col-md-3">Gender*</label>
+              <label for="gender" class="control-label col-md-3">Gender*</label>
               <div class="col-md-8">
                 <form action="">
                   <input type="radio" name="gender" value="male"> Male<br>
-                  <input type="radio" name="gender" value="female"> Female<br>
-                  <input type="radio" name="gender" value="other"> Other
+                  <input type="radio" name="gender" value="female"> Female
                 </form>
               </div>
             </div>
@@ -710,7 +705,7 @@
             </div>
             <div class="form-group col-md-10">
               <!-- Eye color -->
-              <label for="street1_id" class="control-label col-md-3">Eye Color*</label>
+              <label for="eye-color" class="control-label col-md-3">Eye Color*</label>
               <div class="col-md-8">
                 <form action="">
                   <input type="radio" name="eye-color" value="brown"> Brown<br>
@@ -723,7 +718,7 @@
               <!-- Drivers license -->
               <label for="license_id" class="control-label col-md-3">Drivers License*</label>
               <div class="col-md-3">
-                <select class="form-control" id="prevState_id">
+                <select class="form-control" id="license_state_id">
                   <option value="">Issuing state</option>
                   <option value="">---</option>
                   <option value="AL">Alabama</option>
@@ -799,33 +794,33 @@
             <form>
               <div class="form-group col-md-10">
                 <!-- Prev Street 1 -->
-                <label for="prevStreet1_id" class="control-label col-md-3">Prev Street Address 1*</label>
+                <label for="prev_street1_id" class="control-label col-md-3">Prev Street Address 1*</label>
                 <div class="col-md-8">
-                  <input type="text" class="form-control" id="prevStreet1_id" name="prevStreet1" placeholder="Street address, P.O. box, company name, c/o">
+                  <input type="text" class="form-control" id="prev_street1_id" name="prevStreet1" placeholder="Street address, P.O. box, company name, c/o">
                 </div>
               </div>
 
               <div class="form-group col-md-10">
                 <!-- Prev Street 2 -->
-                <label for="prevStreet2_id" class="control-label col-md-3">Prev Street Address 2</label>
+                <label for="prev_street2_id" class="control-label col-md-3">Prev Street Address 2</label>
                 <div class="col-md-8">
-                  <input type="text" class="form-control" id="prevStreet2_id" name="prevStreet2" placeholder="Apartment, suite, unit, building, floor, etc.">
+                  <input type="text" class="form-control" id="prev_street2_id" name="prevStreet2" placeholder="Apartment, suite, unit, building, floor, etc.">
                 </div>
               </div>
 
               <div class="form-group col-md-10">
                 <!-- Prev City-->
-                <label for="prevCity_id" class="control-label col-md-3">Prev City*</label>
+                <label for="prev_city_id" class="control-label col-md-3">Prev City*</label>
                 <div class="col-md-8">
-                  <input type="text" class="form-control" id="prevCity_id" name="prevCity" placeholder="City/town">
+                  <input type="text" class="form-control" id="prev_city_id" name="prevCity" placeholder="City/town">
                 </div>
               </div>
 
               <div class="form-group col-md-10">
                 <!-- Prev State Button -->
-                <label for="prevState_id" class="control-label col-md-3">Prev State*</label>
+                <label for="prev_state_id" class="control-label col-md-3">Prev State*</label>
                 <div class="col-md-3">
-                  <select class="form-control" id="prevState_id">
+                  <select class="form-control" id="prev_state_id">
                     <option value="">please select</option>
                     <option value="">---</option>
                     <option value="AL">Alabama</option>
@@ -882,18 +877,19 @@
                   </select>
                 </div>
                 <!-- Prev Zip Code-->
-                <label for="prevZip_id" class="control-label col-md-2">Prev Zip Code*</label>
+                <label for="prev_zip_id" class="control-label col-md-2">Prev Zip Code*</label>
                 <div class="col-md-3">
-                  <input type="text" class="form-control" id="prevZip_id" name="prevZip" placeholder="#####">
+                  <input type="text" class="form-control" id="prev_zip_id" name="prevZip" placeholder="#####">
                 </div>
               </div>
             </form>
           </div>
           <div class="step-pane" data-step="4">
+            <h4>We do not store sensitive information such as Social Security Numbers, and therefore some fields on the following forms must be filled out directly</h4>
             <h4>The following forms require your direct digital signature.  The other fields have been filled in from the information you have provided.</h4>
           </div>
           <div class="step-pane" data-step="5">
-            <h4>We do not store sensitive information such as Social Security Numbers, and therefore some fields on the following forms must be filled out directly</h4>
+            <h4>Once you have completed the fingerprinting process, take a picture of the fingerprinting receipt and upload it below</h4>
           </div>
         </div>
       </form>
