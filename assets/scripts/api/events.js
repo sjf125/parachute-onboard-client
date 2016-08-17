@@ -27,6 +27,13 @@ const addHandlers = () => {
     event.preventDefault();
     authApi.changePass(authUi.success, authUi.failure, data);
   });
+  $('#submit-info').on('click', function (event) {
+    console.log('click!');
+    let data = getFormFields(this);
+    console.log(data);
+    event.preventDefault();
+    // authApi.changePass(authUi.success, authUi.failure, data);
+  });
 };
 
 module.exports = {
