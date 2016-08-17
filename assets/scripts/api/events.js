@@ -29,7 +29,7 @@ const addHandlers = () => {
   });
   $('#submit-info').on('click', function (event) {
     console.log('click!');
-    let data = getFormFields(this);
+    let data = $('#onboardingForm').serialize();
     console.log(data);
     event.preventDefault();
     // authApi.changePass(authUi.success, authUi.failure, data);
