@@ -28,10 +28,10 @@
 
             <div class="account-wall">
               <h1 class="text-center login-title">Sign in to become a Parachute teacher!</h1>
-                <form class="form-signin">
-                  <input type="email" class="form-control" placeholder="Email" required autofocus>
-                  <input type="password" class="form-control" placeholder="Password" required>
-                  <button class="btn btn-lg btn-primary btn-block" type="submit" id="sign-in">
+                <form class="form-signin" id="sign-in">
+                  <input type="email" name="credentials[email]" class="form-control" placeholder="Email" required autofocus>
+                  <input type="password" name="credentials[password]" class="form-control" placeholder="Password" required>
+                  <button class="btn btn-lg btn-primary btn-block" type="submit">
                       Sign in</button>
                 </form>
                 <h4 class="text-center" style="margin: 0;">- or -</h4>
@@ -43,7 +43,7 @@
             </div>
         </div>
     </div>
-</div>
+  </div>
   <div class="col-md-10 col-md-offset-1">
     <div class="wizard" data-initialize="wizard" id="onboardingWizard">
     <div class="steps-container">
@@ -334,7 +334,7 @@
             <br/>
             <h4>When you've scheduled your fingerprinting, please enter the date and time of your appointment below</h4>
             <div class="form-group col-md-10">
-              <div class="col-md-4">                
+              <div class="col-md-4">
                 <input type="datetime-local" class="form-control" id="fngrprnt_appt" value="">
               </div>
             </div>
@@ -747,6 +747,9 @@
     </div>
 
   </div>
+  <div class="col-md-2 col-md-offset-5">
+    <button class="btn btn-lg btn-danger btn-block" type="button" id="sign-out">Sign out</button>
+  </body>
 
   <!-- Modal -->
   <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -758,11 +761,11 @@
         </div>
         <div class="modal-body">
           <div class="account-wall">
-              <form class="form-signin">
+              <form class="form-signin" id="sign-up">
                 <input type="email" name="credentials[email]" class="form-control" placeholder="Email" required autofocus>
                 <input type="password" name="credentials[password]" class="form-control" placeholder="Password" required>
                 <input type="password" name="credentials[password_confirmation]" class="form-control" placeholder="Confirm password" required>
-                <button class="btn btn-lg btn-success btn-block" type="submit" id="sign-up">
+                <button class="btn btn-lg btn-success btn-block" type="submit">
                     Create account</button>
               </form>
           </div>
