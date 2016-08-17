@@ -1,5 +1,5 @@
 'use strict';
 
 $(() => {
-  $('#myScheduler').scheduler();
+  console.log('working!');
 });
