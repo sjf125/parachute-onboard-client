@@ -47,9 +47,25 @@ const changePass = (success, failure, data) => {
   .fail(failure);
 };
 
+const submitInfo = (success, failure, data) => {
+  console.log(data);
+  $.ajax({
+    method: 'PATCH',
+    url: app.api + '/submit-info/' + app.user.id,
+    headers: {
+      Authorization: 'Token token=' + app.user.token,
+    },
+    dataProcessing: false,
+    // contentType: "application/json; charset=utf-8",
+    data
+  }).done(success)
+  .fail(failure);
+};
+
 module.exports = {
   signUp,
   signIn,
   signOut,
-  changePass
+  changePass,
+  submitInfo
 };

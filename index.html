@@ -79,7 +79,7 @@
         </button>
       </div>
 
-      <form id="onboardingForm" method="post" class="form-horizontal">
+      <form id="onboardingForm" class="form-horizontal">
         <div class="step-content">
           <div class="step-pane active" data-step="1">
             <form>
@@ -90,11 +90,11 @@
                 <!-- First and Middle Name -->
                 <label for="first_name_id" class="control-label col-md-3">First Name</label>
                 <div class="col-md-4">
-                  <input type="text" class="form-control" name="first_name" placeholder="First/given name" />
+                  <input type="text" class="form-control" name="info[first_name]" placeholder="First/given name" />
                 </div>
                 <label for="mid_name_id" class="control-label col-md-2">Middle Initial</label>
                 <div class="col-md-2">
-                  <input type="text" class="form-control" name="mid_name" placeholder="M.I." />
+                  <input type="text" class="form-control" name="info[mid_name]" placeholder="M.I." />
                 </div>
               </div>
 
@@ -102,7 +102,7 @@
                 <!-- Last Name -->
                 <label for="last_name_id" class="control-label col-md-3">Last Name*</label>
                 <div class="col-md-8">
-                  <input type="text" class="form-control" id="last_name_id" name="last_name" placeholder="Last/family name">
+                  <input type="text" class="form-control" id="last_name_id" name="info[last_name]" placeholder="Last/family name">
                 </div>
               </div>
 
@@ -110,7 +110,7 @@
                 <!-- Street 1 -->
                 <label for="street1_id" class="control-label col-md-3">Street Address 1*</label>
                 <div class="col-md-8">
-                  <input type="text" class="form-control" id="street1_id" name="street1" placeholder="Street address, P.O. box, company name, c/o">
+                  <input type="text" class="form-control" id="street1_id" name="info[street1]" placeholder="Street address, P.O. box, company name, c/o">
                 </div>
               </div>
 
@@ -118,7 +118,7 @@
                 <!-- Street 2 -->
                 <label for="street2_id" class="control-label col-md-3">Street Address 2</label>
                 <div class="col-md-8">
-                  <input type="text" class="form-control" id="street2_id" name="street2" placeholder="Apartment, suite, unit, building, floor, etc.">
+                  <input type="text" class="form-control" id="street2_id" name="info[street2]" placeholder="Apartment, suite, unit, building, floor, etc.">
                 </div>
               </div>
 
@@ -126,7 +126,7 @@
                 <!-- City-->
                 <label for="city_id" class="control-label col-md-3">City*</label>
                 <div class="col-md-8">
-                  <input type="text" class="form-control" id="city_id" name="city" placeholder="City/town">
+                  <input type="text" class="form-control" id="city_id" name="info[city]" placeholder="City/town">
                 </div>
               </div>
 
@@ -134,7 +134,7 @@
                 <!-- State Button -->
                 <label for="state_id" class="control-label col-md-3">State*</label>
                 <div class="col-md-3">
-                  <select class="form-control" id="state_id" name="state">
+                  <select class="form-control" id="state_id" name="info[state]">
                     <option value="">please select</option>
                     <option value="">---</option>
                     <option value="AL">Alabama</option>
@@ -193,14 +193,14 @@
                 <!-- Zip Code-->
                 <label for="zip_id" class="control-label col-md-2">Zip Code*</label>
                 <div class="col-md-3">
-                  <input type="text" class="form-control" id="zip_id" name="zip" placeholder="#####">
+                  <input type="text" class="form-control" id="zip_id" name="info[zip]" placeholder="#####">
                 </div>
               </div>
               <div class="form-group col-md-10">
                 <!-- Phone-->
                 <label for="phone_id" class="control-label col-md-3">Phone*</label>
                 <div class="col-md-3">
-                  <input type="tel" class="form-control" id="phone_id" name="phone" placeholder="Primary phone number">
+                  <input type="tel" class="form-control" id="phone_id" name="info[phone]" placeholder="Primary phone number">
                 </div>
               </div>
               <br/>
@@ -212,10 +212,10 @@
                 <!-- Emergency contact name -->
                 <label for="em_name_id" class="control-label col-md-3">Name</label>
                 <div class="col-md-4">
-                  <input type="text" class="form-control" id="em_first_name_id" name="em_first_name" placeholder="First/given name" />
+                  <input type="text" class="form-control" id="em_first_name_id" name="info[em_first_name]" placeholder="First/given name" />
                 </div>
                 <div class="col-md-4">
-                  <input type="text" class="form-control" id="em_last_name_id" name="em_last_name" placeholder="Last/family name" />
+                  <input type="text" class="form-control" id="em_last_name_id" name="info[em_last_name]" placeholder="Last/family name" />
                 </div>
               </div>
 
@@ -223,7 +223,7 @@
                 <!-- Emergency contact relation -->
                 <label for="em_relation_id" class="control-label col-md-3">Relation*</label>
                 <div class="col-md-8">
-                  <input type="text" class="form-control" id="em_relation_id" name="em_relation" placeholder="Relation to emergency contact">
+                  <input type="text" class="form-control" id="em_relation_id" name="info[em_relation]" placeholder="Relation to emergency contact">
                 </div>
               </div>
 
@@ -231,7 +231,7 @@
                 <!-- Street 1 -->
                 <label for="em_street1_id" class="control-label col-md-3">Street Address 1*</label>
                 <div class="col-md-8">
-                  <input type="text" class="form-control" id="em_street1_id" name="em_street1" placeholder="Street address, P.O. box, company name, c/o">
+                  <input type="text" class="form-control" id="em_street1_id" name="info[em_street1]" placeholder="Street address, P.O. box, company name, c/o">
                 </div>
               </div>
 
@@ -239,7 +239,7 @@
                 <!-- Street 2 -->
                 <label for="em_street2_id" class="control-label col-md-3">Street Address 2</label>
                 <div class="col-md-8">
-                  <input type="text" class="form-control" id="em_street2_id" name="em_street2" placeholder="Apartment, suite, unit, building, floor, etc.">
+                  <input type="text" class="form-control" id="em_street2_id" name="info[em_street2]" placeholder="Apartment, suite, unit, building, floor, etc.">
                 </div>
               </div>
 
@@ -247,7 +247,7 @@
                 <!-- City-->
                 <label for="em_city_id" class="control-label col-md-3">City*</label>
                 <div class="col-md-8">
-                  <input type="text" class="form-control" id="em_city_id" name="em_city" placeholder="City/town">
+                  <input type="text" class="form-control" id="em_city_id" name="info[em_city]" placeholder="City/town">
                 </div>
               </div>
 
@@ -255,7 +255,7 @@
                 <!-- State Button -->
                 <label for="em_state_id" class="control-label col-md-3">State*</label>
                 <div class="col-md-3">
-                  <select class="form-control" id="em_state_id" name="em_state">
+                  <select class="form-control" id="em_state_id" name="info[em_state]">
                     <option value="">please select</option>
                     <option value="">---</option>
                     <option value="AL">Alabama</option>
@@ -314,14 +314,14 @@
                 <!-- Zip Code-->
                 <label for="em_zip_id" class="control-label col-md-2">Zip Code*</label>
                 <div class="col-md-3">
-                  <input type="text" class="form-control" id="em_zip_id" name="em_zip" placeholder="#####">
+                  <input type="text" class="form-control" id="em_zip_id" name="info[em_zip]" placeholder="#####">
                 </div>
               </div>
               <div class="form-group col-md-10">
                 <!-- Phone-->
                 <label for="em_phone_id" class="control-label col-md-3">Phone*</label>
                 <div class="col-md-3">
-                  <input type="tel" class="form-control" id="em_phone_id" name="em_phone" placeholder="Primary phone number">
+                  <input type="tel" class="form-control" id="em_phone_id" name="info[em_phone]" placeholder="Primary phone number">
                 </div>
               </div>
             </form>
@@ -335,7 +335,7 @@
             <h4>When you've scheduled your fingerprinting, please enter the date and time of your appointment below</h4>
             <div class="form-group col-md-10">
               <div class="col-md-4">
-                <input type="datetime-local" class="form-control" id="fngrprnt_appt_id" name="fngrprnt_appt" value="">
+                <input type="datetime-local" class="form-control" id="fngrprnt_appt_id" name="info[fngrprnt_appt]" value="">
               </div>
             </div>
           </div>
@@ -349,7 +349,7 @@
               <!-- Maiden/Alias Name -->
               <label for="maiden_name_id" class="control-label col-md-3">Alias/Maiden Name</label>
               <div class="col-md-8">
-                <input type="text" class="form-control" id="maiden_name_id" name="maiden_name" placeholder="Alias or maiden name">
+                <input type="text" class="form-control" id="maiden_name_id" name="info[maiden_name]" placeholder="Alias or maiden name">
               </div>
             </div>
 
@@ -357,12 +357,12 @@
               <!-- Birthdate -->
               <label for="dob" class="control-label col-md-3">Date of Birth*</label>
               <div class="col-md-3">
-                <input type="date" class="form-control" id="dob_id" name="dob">
+                <input type="date" class="form-control" id="dob_id" name="info[dob]">
               </div>
               <!-- Birth city -->
               <label for="birth_city_id" class="control-label col-md-2">Birth City*</label>
               <div class="col-md-3">
-                <input type="text" class="form-control" id="birth_city_id" name="birth_city" placeholder="Where you were born">
+                <input type="text" class="form-control" id="birth_city_id" name="info[birth_city]" placeholder="Where you were born">
               </div>
             </div>
 
@@ -371,8 +371,8 @@
               <label for="gender" class="control-label col-md-3">Gender*</label>
               <div class="col-md-8">
                 <form action="">
-                  <input type="radio" name="gender" value="male"> Male<br>
-                  <input type="radio" name="gender" value="female"> Female
+                  <input type="radio" name="info[gender]" value="male"> Male<br>
+                  <input type="radio" name="info[gender]" value="female"> Female
                 </form>
               </div>
             </div>
@@ -380,7 +380,7 @@
               <!-- Height -->
               <label for="ht" class="control-label col-md-3">Height*</label>
               <div class="col-md-2">
-                <select class="form-control" id="ht_ft_id" name="ht_ft">
+                <select class="form-control" id="ht_ft_id" name="info[ht_ft]">
                   <option value="">feet</option>
                   <option value="">---</option>
                   <option value="1">1</option>
@@ -394,7 +394,7 @@
                 </select>
               </div>
               <div class="col-md-2">
-                <select  class="form-control" id="ht_in_id" name="ht_in">
+                <select  class="form-control" id="ht_in_id" name="info[ht_in]">
                   <option value="">inches</option>
                   <option value="">-----</option>
                   <option value="1">1</option>
@@ -416,9 +416,9 @@
               <label for="eye-color" class="control-label col-md-3">Eye Color*</label>
               <div class="col-md-8">
                 <form action="">
-                  <input type="radio" name="eye_color" value="brown"> Brown<br>
-                  <input type="radio" name="eye_color" value="blue"> Blue<br>
-                  <input type="radio" name="eye_color" value="green"> Green
+                  <input type="radio" name="info[eye_color]" value="brown"> Brown<br>
+                  <input type="radio" name="info[eye_color]" value="blue"> Blue<br>
+                  <input type="radio" name="info[eye_color]" value="green"> Green
                 </form>
               </div>
             </div>
@@ -426,7 +426,7 @@
               <!-- Drivers license -->
               <label for="license_id" class="control-label col-md-3">Drivers License*</label>
               <div class="col-md-3">
-                <select class="form-control" id="license_state_id" name="license_state">
+                <select class="form-control" id="license_state_id" name="info[license_state]">
                   <option value="">Issuing state</option>
                   <option value="">---</option>
                   <option value="AL">Alabama</option>
@@ -483,14 +483,14 @@
                 </select>
               </div>
               <div class="col-md-5">
-                <input type="text" class="form-control" id="license_num_id" name="license_num" placeholder="License number">
+                <input type="text" class="form-control" id="license_num_id" name="info[license_num]" placeholder="License number">
               </div>
             </div>
             <div class="form-group col-md-10">
               <!-- Mother's Maiden Name -->
               <label for="mom_maiden_name_id" class="control-label col-md-3">Mother's Maiden Name*</label>
               <div class="col-md-8">
-                <input type="text" class="form-control" id="mom_maiden_name_id" name="mom_maiden_name" placeholder="Your mother's maiden name">
+                <input type="text" class="form-control" id="mom_maiden_name_id" name="info[mom_maiden_name]" placeholder="Your mother's maiden name">
               </div>
             </div>
             <br/>
@@ -503,7 +503,7 @@
                 <!-- Prev Street 1 -->
                 <label for="prev_street1_id" class="control-label col-md-3">Prev Street Address 1*</label>
                 <div class="col-md-8">
-                  <input type="text" class="form-control" id="prev_street1_id" name="prev_street1" placeholder="Street address, P.O. box, company name, c/o">
+                  <input type="text" class="form-control" id="prev_street1_id" name="info[prev_street1]" placeholder="Street address, P.O. box, company name, c/o">
                 </div>
               </div>
 
@@ -511,7 +511,7 @@
                 <!-- Prev Street 2 -->
                 <label for="prev_street2_id" class="control-label col-md-3">Prev Street Address 2</label>
                 <div class="col-md-8">
-                  <input type="text" class="form-control" id="prev_street2_id" name="prev_street2" placeholder="Apartment, suite, unit, building, floor, etc.">
+                  <input type="text" class="form-control" id="prev_street2_id" name="info[prev_street2]" placeholder="Apartment, suite, unit, building, floor, etc.">
                 </div>
               </div>
 
@@ -519,7 +519,7 @@
                 <!-- Prev City-->
                 <label for="prev_city_id" class="control-label col-md-3">Prev City*</label>
                 <div class="col-md-8">
-                  <input type="text" class="form-control" id="prev_city_id" name="prev_city" placeholder="City/town">
+                  <input type="text" class="form-control" id="prev_city_id" name="info[prev_city]" placeholder="City/town">
                 </div>
               </div>
 
@@ -527,7 +527,7 @@
                 <!-- Prev State Button -->
                 <label for="prev_state_id" class="control-label col-md-3">Prev State*</label>
                 <div class="col-md-3">
-                  <select class="form-control" id="prev_state_id" name="prev_state">
+                  <select class="form-control" id="prev_state_id" name="info[prev_state]">
                     <option value="">please select</option>
                     <option value="">---</option>
                     <option value="AL">Alabama</option>
@@ -586,7 +586,7 @@
                 <!-- Prev Zip Code-->
                 <label for="prev_zip_id" class="control-label col-md-2">Prev Zip Code*</label>
                 <div class="col-md-3">
-                  <input type="text" class="form-control" id="prev_zip_id" name="prev_zip" placeholder="#####">
+                  <input type="text" class="form-control" id="prev_zip_id" name="info[prev_zip]" placeholder="#####">
                 </div>
               </div>
           </div>

@@ -4,7 +4,25 @@ const getFormFields = require('../../../lib/get-form-fields');
 
 const authApi = require('./ajax.js');
 const authUi = require('./ui.js');
+// const serializeObj = require('~/bower_components/jquery-serialize-object');
 // const app = require('./apiurl.js');
+
+$.fn.serializeObject = function()
+{
+    let o = {};
+    let a = this.serializeArray();
+    $.each(a, function() {
+        if (o[this.name] !== undefined) {
+            if (!o[this.name].push) {
+                o[this.name] = [o[this.name]];
+            }
+            o[this.name].push(this.value || '');
+        } else {
+            o[this.name] = this.value || '';
+        }
+    });
+    return o;
+};
 
 const addHandlers = () => {
   // Login handers
@@ -28,11 +46,11 @@ const addHandlers = () => {
     authApi.changePass(authUi.success, authUi.failure, data);
   });
   $('#submit-info').on('click', function (event) {
-    console.log('click!');
+    // let data = JSON.stringify($('#onboardingForm').serializeObject());
     let data = $('#onboardingForm').serialize();
-    console.log(data);
+    // console.log(data);
     event.preventDefault();
-    // authApi.changePass(authUi.success, authUi.failure, data);
+    authApi.submitInfo(authUi.success, authUi.failure, data);
   });
 };
 
