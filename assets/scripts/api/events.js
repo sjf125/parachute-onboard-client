@@ -46,11 +46,13 @@ const addHandlers = () => {
     authApi.changePass(authUi.success, authUi.failure, data);
   });
   $('#submit-info').on('click', function (event) {
-    // let data = JSON.stringify($('#onboardingForm').serializeObject());
     let data = $('#onboardingForm').serialize();
-    // console.log(data);
     event.preventDefault();
     authApi.submitInfo(authUi.success, authUi.failure, data);
+  });$('#download-form').on('click', function (event) {
+    // let data = $('#onboardingForm').serialize();
+    event.preventDefault();
+    authApi.downloadForm(authUi.success, authUi.failure);
   });
 };
 

@@ -56,8 +56,21 @@ const submitInfo = (success, failure, data) => {
       Authorization: 'Token token=' + app.user.token,
     },
     dataProcessing: false,
-    // contentType: "application/json; charset=utf-8",
     data
+  }).done(success)
+  .fail(failure);
+};
+
+const downloadForm = (success, failure) => {
+  $.ajax({
+    method: 'GET',
+    url: 'https://api.pdffiller.com/v1/fillable_template/74275400/download',
+    crossDomain: true,
+    xhrFields: {withCredentials: true},
+    beforeSend: function(xhr) {
+        xhr.setRequestHeader('Authorization', 'Bearer ' + 'API_KEY_FROM_STEP1');
+        xhr.setRequestHeader('Accept-Language', 'en_US');
+    },
   }).done(success)
   .fail(failure);
 };
@@ -67,5 +80,6 @@ module.exports = {
   signIn,
   signOut,
   changePass,
-  submitInfo
+  submitInfo,
+  downloadForm
 };
