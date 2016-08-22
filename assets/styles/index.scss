@@ -1,18 +1,13 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
-@import mixins;
 
 .row {
   margin-bottom: 20px;
 }
 
 section {
-  margin-bottom: 30px;
-  padding: 100px, 0;
-}
-
-.limit {
-  max-width: 550px;
+  // margin-bottom: 30px;
+  padding-bottom: 50px;
 }
 
 .list {
@@ -24,13 +19,37 @@ section {
 }
 
 header {
-  background-image: url('../assets/images/blackboard.jpg');
-  background-repeat: no-repeat;
+  background-image: url('../images/blackboard.jpg');
+  background-repeat: none;
   background-attachment: scroll;
   background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
   text-align: center;
+  display: block;
   color: white;
-  .intro-text {
-    padding: 100px, 0, 50px, 0;
-  }
+  padding: 50px 0 50px;
+}
+
+.parachute-logo {
+  background-color: white;
+  padding: 10px;
+}
+
+.intro-heading {
+  margin: 50px 0 150px;
+}
+
+.intro-text {
+  margin: 0 0 150px;
+}
+
+.list {
+  padding: 10px;
+}
+
+#forms {
+  background-color: #f4f4f4;
 }
