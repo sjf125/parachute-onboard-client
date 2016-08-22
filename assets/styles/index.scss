@@ -1,2 +1,22 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+
+.row {
+  margin-bottom: 20px;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+.limit {
+  max-width: 550px;
+}
+
+.list {
+  background-color: #edf8f8;
+}
+
+.nounderline {
+  text-decoration: none !important;
+}
