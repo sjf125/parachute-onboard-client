@@ -1,5 +1,6 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+@import mixins;
 
 .row {
   margin-bottom: 20px;
@@ -7,6 +8,7 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 
 section {
   margin-bottom: 30px;
+  padding: 100px, 0;
 }
 
 .limit {
@@ -19,4 +21,16 @@ section {
 
 .nounderline {
   text-decoration: none !important;
+}
+
+header {
+  background-image: url('../assets/images/blackboard.jpg');
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  text-align: center;
+  color: white;
+  .intro-text {
+    padding: 100px, 0, 50px, 0;
+  }
 }
