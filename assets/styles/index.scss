@@ -6,12 +6,20 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 }
 
 section {
-  // margin-bottom: 30px;
   padding-bottom: 50px;
+}
+
+.label-code {
+  background-color: #000;
 }
 
 .list {
   background-color: #edf8f8;
+  padding: 5px 20px;
+}
+
+.parachute-logo {
+  margin: 0 auto;
 }
 
 .nounderline {
@@ -44,10 +52,6 @@ header {
 
 .intro-text {
   margin: 0 0 150px;
-}
-
-.list {
-  padding: 10px;
 }
 
 #forms {
